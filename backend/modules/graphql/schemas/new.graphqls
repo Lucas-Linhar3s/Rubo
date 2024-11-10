@@ -1,0 +1,15 @@
+type New {
+    id: ID!
+}
+
+input NewInput {
+    id: ID!
+}
+
+extend type Query {
+    new(id: ID!): New!
+}
+
+extend type Mutation {
+    createNew(new: NewInput!): New!
+}

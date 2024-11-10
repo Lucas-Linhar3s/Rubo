@@ -1,0 +1,31 @@
+input RegisterUserInput {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input LoginUserInput {
+    email: String!
+    password: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String
+    role: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+type SessionOut {
+    userID: ID!
+    accessToken: String!
+    dataExpiracao: String!   
+}
+
+extend type Mutation {
+    registerUser(input: RegisterUserInput!): User!
+    loginUser(input: LoginUserInput!): SessionOut!
+}
