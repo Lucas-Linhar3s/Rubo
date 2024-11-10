@@ -1,0 +1,10 @@
+storage/*
+config/*
+docs/
+storage/
+ 
+ The  storage  directory is where the application stores files that are uploaded by users. The  config  directory is where the application stores configuration files. The  docs  directory is where the application stores documentation. 
+ The  .gitignore  file tells Git to ignore these directories. 
+ Step 3: Create the Dockerfile 
+ The Dockerfile is a text file that contains a set of instructions for building a Docker image. 
+ Create a new file named  Dockerfile  in the  backend  directory and add the following content:
